@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function oblicz()
+        {
+            var waga = document.getElementById("waga").value;
+            var wzrost = document.getElementById("wzrost").value;
+            var bmi = waga/(wzrost*wzrost);
+            document.getElementById("wynik").innerHTML =(bmi*10000).toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Oblicz swoje BMI</h1>
+    <h2>Uwaga BMI wyłącznie dla osób dorosłych</h2>
+    <label for "waga">Podaj swoją wagę </label>
+    <input type="number" id="waga" dir="rtl" value=0>
+    <label for "wzrost">Podaj swój wzrost </label>
+    <input type="number" id="wzrost" dir="rtl" value=0>
+    <button onclick="oblicz()">Oblicz swoje BMI</button>
+    <div id="wynik">Tu będzie wynik</div>
+</body>
+</html>
